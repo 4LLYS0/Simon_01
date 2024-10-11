@@ -89,9 +89,9 @@ h1 {
     opacity: 1;
 }
 
-/* Botão de login no canto superior direito */
+
 #loginBtn {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
@@ -107,7 +107,7 @@ h1 {
 #loginForm,
 #signupForm {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

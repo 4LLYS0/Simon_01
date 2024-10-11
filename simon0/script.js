@@ -128,21 +128,16 @@ function displayRanking() {
 
     userScores.sort((a, b) => b.score - a.score);
 
-    userScores.forEach((user, index) => {
+    userScores.forEach((user) => {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${user.username}</td>
-            <td>${user.score}</td>
-            <td><button class="delete-btn" data-index="${index}">Excluir</button></td>`;
+            <td>${user.score}</td>`;
         rankingBody.appendChild(row);
     });
 
     rankingTable.style.width = "80%";
     rankingTable.style.display = "block";
-
-    document.querySelectorAll(".delete-btn").forEach(button => {
-        button.addEventListener("click", deleteUser);
-    });
 }
 
 function deleteUser(e) {
